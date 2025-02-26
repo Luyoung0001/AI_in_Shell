@@ -13,6 +13,8 @@
 直接输入：
 ```bash
 sudo make start KEY=YOUR_API
+source ~/.zshrc # 如果你使用 zsh
+source ~/.bashrc  # 如果你编辑了 .bashrc
 ```
 
 就可以了，之后就可以将这个仓库删除了。

@@ -45,11 +45,18 @@ def ask_deepseek(user_question):
     return answer_content
 
 if __name__ == "__main__":
+    user_question = ""
+    print("请输入问题，使用 ! + 回车 结束提问 (输入 'exit' 退出):")
     while True:
-        user_prompt = input("请输入问题 (输入 'exit' 退出): ")
-        if user_prompt.lower() == 'exit':
+        user_prompt_line = input()
+        if user_prompt_line.lower() == 'exit':
             break
-        if user_prompt:
-            ask_deepseek(user_prompt)
-        else:
-            print("您没有输入任何问题。")
+        user_question += user_prompt_line + "\n"  # 添加换行符，保留多行问题
+        if user_prompt_line.endswith("!"):
+            final_question = user_question.rstrip("!\n") # 移除末尾的 ! 和换行符
+            if final_question:
+                ask_deepseek(final_question)
+            else:
+                print("您没有输入任何问题。")
+            user_question = "" # 重置问题，开始新的提问
+            print("\n请输入问题，使用 ! + 回车 结束提问 (输入 'exit' 退出):") # 再次打印提示信息

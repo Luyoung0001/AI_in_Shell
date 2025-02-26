@@ -4,6 +4,8 @@
 
 ## 准备
 
+环境默认使用 `zsh`。如果使用 `bash`，可能要修改一下 Makefile 脚本。
+
 阿里 api_key。具体参考 [获取API Key](https://help.aliyun.com/zh/model-studio/developer-reference/get-api-key?spm=a2c4g.11186623.0.0.532547bbWBb3Jz)。
 
 ## 执行
@@ -17,9 +19,11 @@ sudo make start KEY=YOUR_API
 
 ## 效果
 
+使用 `!`+ 回车 来表示结束提问。
+
 ```bash
 $ AI
-请输入问题 (输入 'exit' 退出): hello there
+请输入问题 (输入 'exit' 退出): hello there!
 
 ====================思考过程====================
 

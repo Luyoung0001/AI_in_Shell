@@ -1,4 +1,4 @@
-ALL ?= Key
+KEY ?= Key
 DIR = $(shell pwd)
 FATHER_DIR = $(DIR)/..
 
@@ -10,8 +10,8 @@ start:
 	# 安装 openai
 	@sudo pip3 install openai
 	# 设置环境变量
-	@echo "export DASHSCOPE_API_KEY=$(ALL)" >> ~/.bashrc
-	@echo "export DASHSCOPE_API_KEY=$(ALL)" >> ~/.zshrc
+	@echo "export DASHSCOPE_API_KEY=$(KEY)" >> ~/.bashrc
+	@echo "export DASHSCOPE_API_KEY=$(KEY)" >> ~/.zshrc
 	# 使环境变量生效
 	@source ~/.bashrc  # 如果你编辑了 .bashrc
 	@source ~/.zshrc  # 如果你编辑了 .zshrc
